@@ -128,7 +128,8 @@ async def lifespan(app_instance: FastAPI):
 app = FastAPI(
     title="AEGIS AI-SRE Intelligence Platform",
     description="Evidence-Grounded AI-SRE for Microservice Incident Diagnosis & Safe Remediation",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # Enable CORS for Vite frontend

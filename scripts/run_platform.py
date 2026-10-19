@@ -14,9 +14,6 @@ if __name__ == '__main__':
     print("=" * 70)
     print("  AEGIS — AI-Enhanced Guided Investigation & Safe Remediation Platform")
     print("  Starting unified backend & dashboard on http://localhost:8000")
-    from engine.main import testbed
-    testbed.start_traffic()
-
     uvicorn.run(
         "engine.main:app",
         host="0.0.0.0",

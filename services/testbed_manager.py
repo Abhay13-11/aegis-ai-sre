@@ -410,7 +410,11 @@ class MicroservicesTestbed:
     def start_traffic(self):
         if not self.traffic_running:
             self.traffic_running = True
-            self._traffic_task = asyncio.create_task(self._traffic_loop())
+            try:
+                loop = asyncio.get_running_loop()
+                self._traffic_task = loop.create_task(self._traffic_loop())
+            except RuntimeError:
+                self._traffic_task = None
 
     def stop_traffic(self):
         self.traffic_running = False
