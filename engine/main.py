@@ -541,5 +541,25 @@ def toggle_traffic():
 
 # Serve web static assets if built
 _dist_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "web", "dist")
-if os.environ.get("AEGIS_TESTING") != "1" and os.path.isdir(_dist_dir):
-    app.mount("/", StaticFiles(directory=_dist_dir, html=True), name="static")
+_assets_dir = os.path.join(_dist_dir, "assets")
+
+if os.path.isdir(_assets_dir):
+    try:
+        app.mount("/assets", StaticFiles(directory=_assets_dir), name="assets")
+    except Exception as e:
+        print(f"[WARN] StaticFiles mount for /assets skipped: {e}", flush=True)
+
+from fastapi.responses import HTMLResponse
+
+@app.get("/{full_path:path}")
+def serve_spa(full_path: str):
+    if full_path.startswith("api"):
+        raise HTTPException(status_code=404, detail="API route not found")
+    index_file = os.path.join(_dist_dir, "index.html")
+    if os.path.isfile(index_file):
+        try:
+            with open(index_file, "r", encoding="utf-8") as f:
+                return HTMLResponse(content=f.read())
+        except Exception:
+            pass
+    return {"message": "AEGIS AI-SRE Platform API running."}
