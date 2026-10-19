@@ -3,21 +3,34 @@ AEGIS Platform Launcher Script
 Starts the Uvicorn ASGI server hosting the FastAPI backend and built React dashboard.
 """
 
-import uvicorn
 import sys
 import os
+import traceback
+import uvicorn
 
-# Add root directory to python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure root directory is on Python path
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
 if __name__ == '__main__':
-    print("=" * 70)
     port = int(os.environ.get("PORT", 8000))
-    print(f"  Starting unified backend & dashboard on http://0.0.0.0:{port}")
-    uvicorn.run(
-        "engine.main:app",
-        host="0.0.0.0",
-        port=port,
-        reload=False,
-        log_level="info"
-    )
+    print("=" * 70, flush=True)
+    print(f"  AEGIS — AI-Enhanced Guided Investigation & Safe Remediation Platform", flush=True)
+    print(f"  Binding to 0.0.0.0:{port} (PORT env={os.environ.get('PORT', 'default:8000')})", flush=True)
+    print("=" * 70, flush=True)
+
+    try:
+        from engine.main import app
+        print("  FastAPI app imported successfully. Launching Uvicorn ASGI server...", flush=True)
+        uvicorn.run(
+            app,
+            host="0.0.0.0",
+            port=port,
+            log_level="info",
+            access_log=True
+        )
+    except Exception as e:
+        print(f"FATAL: Application failed to start: {e}", file=sys.stderr, flush=True)
+        traceback.print_exc(file=sys.stderr)
+        sys.exit(1)

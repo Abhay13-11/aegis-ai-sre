@@ -31,12 +31,6 @@ COPY README.md ./
 COPY --from=frontend-builder /app/web/dist ./web/dist
 
 ENV PYTHONUNBUFFERED=1
-ENV PORT=8000
-EXPOSE 8000
-
-# Health check endpoint
-HEALTHCHECK --interval=10s --timeout=5s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:8000/api/health || exit 1
 
 # Start AEGIS unified platform
 CMD ["python", "scripts/run_platform.py"]
