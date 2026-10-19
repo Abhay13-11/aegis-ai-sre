@@ -119,7 +119,8 @@ class InvestigationAgent:
             root_cause_candidates=candidates,
             recommended_action_type=recommended_action,
             requires_approval=True,
-            uncertainty_notes=uncertainty_notes
+            uncertainty_notes=uncertainty_notes,
+            tool_calls=tool_calls_made
         )
 
         return output

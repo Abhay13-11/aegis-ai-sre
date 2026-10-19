@@ -1,0 +1,9 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+web/node_modules
+web/.vite
+benchmark_results.json

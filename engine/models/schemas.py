@@ -219,6 +219,7 @@ class AgentToolCall(BaseModel):
 
 class StructuredDiagnosisOutput(BaseModel):
     schema_version: str = "1.0"
+    run_id: str = Field(default_factory=lambda: f"run_{uuid.uuid4().hex[:8]}")
     incident_id: str
     status: str  # diagnosed | inconclusive | needs_human_review
     summary: str
@@ -226,6 +227,27 @@ class StructuredDiagnosisOutput(BaseModel):
     recommended_action_type: str
     requires_approval: bool = True
     uncertainty_notes: List[str] = Field(default_factory=list)
+    tool_calls: List[AgentToolCall] = Field(default_factory=list)
+    created_at: float = Field(default_factory=time.time)
+
+class ManualIncidentCreateRequest(BaseModel):
+    title: str = "Manual Incident Simulation"
+    severity: IncidentSeverity = IncidentSeverity.P2_HIGH
+    affected_services: List[str]
+    description: Optional[str] = "Operator initiated incident for testing"
+
+class AuditEvent(BaseModel):
+    event_id: str = Field(default_factory=lambda: f"aud_{uuid.uuid4().hex[:8]}")
+    actor: str
+    event_type: str
+    entity_id: str
+    timestamp: float = Field(default_factory=time.time)
+    details: Dict[str, Any] = Field(default_factory=dict)
+
+class ActionProposeRequest(BaseModel):
+    action_type: str
+    target_service: str
+    parameters: Dict[str, Any] = Field(default_factory=dict)
 
 # --- Safe Remediation & Verification ---
 

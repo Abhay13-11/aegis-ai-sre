@@ -40,6 +40,8 @@ class PolicyGate:
         return proposal
 
     def approve_action(self, proposal: RemediationActionProposal, approver_name: str) -> RemediationActionProposal:
+        if proposal.state == ActionState.APPROVED:
+            return proposal
         if proposal.state not in (ActionState.PROPOSED, ActionState.PENDING_APPROVAL):
             raise ValueError(f"Cannot approve action in state {proposal.state}")
 

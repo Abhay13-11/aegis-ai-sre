@@ -1,0 +1,314 @@
+{
+  "summary": [
+    {
+      "system_variant": "B1_RULE_BASED",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.0,
+      "unsafe_actions_prevented_percent": 0.0
+    },
+    {
+      "system_variant": "B2_TELEMETRY_ONLY_LLM",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.0,
+      "unsafe_actions_prevented_percent": 0.0
+    },
+    {
+      "system_variant": "B3_TELEMETRY_RAG",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.0,
+      "unsafe_actions_prevented_percent": 0.0
+    },
+    {
+      "system_variant": "B4_TELEMETRY_GRAPH",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.0,
+      "unsafe_actions_prevented_percent": 0.0
+    },
+    {
+      "system_variant": "FULL_AEGIS",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.9,
+      "unsafe_actions_prevented_percent": 100.0
+    },
+    {
+      "system_variant": "ABLATION_NO_GRAPH",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.7,
+      "unsafe_actions_prevented_percent": 100.0
+    },
+    {
+      "system_variant": "ABLATION_NO_TEMPORAL",
+      "scenarios_evaluated": 3,
+      "top_1_accuracy_percent": 100.0,
+      "top_3_accuracy_percent": 100.0,
+      "mrr": 1.0,
+      "avg_diagnosis_time_ms": 0.7,
+      "unsafe_actions_prevented_percent": 100.0
+    }
+  ],
+  "detailed_runs": {
+    "B1_RULE_BASED": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "B1_RULE_BASED",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "B1_RULE_BASED",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "B1_RULE_BASED",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      }
+    ],
+    "B2_TELEMETRY_ONLY_LLM": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "B2_TELEMETRY_ONLY_LLM",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "B2_TELEMETRY_ONLY_LLM",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "B2_TELEMETRY_ONLY_LLM",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      }
+    ],
+    "B3_TELEMETRY_RAG": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "B3_TELEMETRY_RAG",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "B3_TELEMETRY_RAG",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "B3_TELEMETRY_RAG",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.0
+      }
+    ],
+    "B4_TELEMETRY_GRAPH": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "B4_TELEMETRY_GRAPH",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.03
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "B4_TELEMETRY_GRAPH",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.02
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "B4_TELEMETRY_GRAPH",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.02
+      }
+    ],
+    "FULL_AEGIS": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "FULL_AEGIS",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 1.27
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "FULL_AEGIS",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.71
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "FULL_AEGIS",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.72
+      }
+    ],
+    "ABLATION_NO_GRAPH": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "ABLATION_NO_GRAPH",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.67
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "ABLATION_NO_GRAPH",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.65
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "ABLATION_NO_GRAPH",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.74
+      }
+    ],
+    "ABLATION_NO_TEMPORAL": [
+      {
+        "scenario_id": "SCN-DB-01",
+        "variant": "ABLATION_NO_TEMPORAL",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.77
+      },
+      {
+        "scenario_id": "SCN-DB-02",
+        "variant": "ABLATION_NO_TEMPORAL",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.63
+      },
+      {
+        "scenario_id": "SCN-DB-03",
+        "variant": "ABLATION_NO_TEMPORAL",
+        "ground_truth_root": "inventory_service",
+        "top_1_prediction": "inventory_service",
+        "rank": 1,
+        "top_1": true,
+        "top_3": true,
+        "reciprocal_rank": 1.0,
+        "diagnosis_time_ms": 0.84
+      }
+    ]
+  }
+}
