@@ -42,7 +42,7 @@
       "top_1_accuracy_percent": 100.0,
       "top_3_accuracy_percent": 100.0,
       "mrr": 1.0,
-      "avg_diagnosis_time_ms": 0.9,
+      "avg_diagnosis_time_ms": 1.4,
       "unsafe_actions_prevented_percent": 100.0
     },
     {
@@ -51,7 +51,7 @@
       "top_1_accuracy_percent": 100.0,
       "top_3_accuracy_percent": 100.0,
       "mrr": 1.0,
-      "avg_diagnosis_time_ms": 0.7,
+      "avg_diagnosis_time_ms": 0.8,
       "unsafe_actions_prevented_percent": 100.0
     },
     {
@@ -60,7 +60,7 @@
       "top_1_accuracy_percent": 100.0,
       "top_3_accuracy_percent": 100.0,
       "mrr": 1.0,
-      "avg_diagnosis_time_ms": 0.7,
+      "avg_diagnosis_time_ms": 0.9,
       "unsafe_actions_prevented_percent": 100.0
     }
   ],
@@ -75,7 +75,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.0
+        "diagnosis_time_ms": 0.01
       },
       {
         "scenario_id": "SCN-DB-02",
@@ -191,7 +191,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.02
+        "diagnosis_time_ms": 0.01
       },
       {
         "scenario_id": "SCN-DB-03",
@@ -215,7 +215,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 1.27
+        "diagnosis_time_ms": 1.06
       },
       {
         "scenario_id": "SCN-DB-02",
@@ -226,7 +226,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.71
+        "diagnosis_time_ms": 0.7
       },
       {
         "scenario_id": "SCN-DB-03",
@@ -237,7 +237,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.72
+        "diagnosis_time_ms": 2.39
       }
     ],
     "ABLATION_NO_GRAPH": [
@@ -250,7 +250,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.67
+        "diagnosis_time_ms": 0.87
       },
       {
         "scenario_id": "SCN-DB-02",
@@ -272,7 +272,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.74
+        "diagnosis_time_ms": 0.89
       }
     ],
     "ABLATION_NO_TEMPORAL": [
@@ -285,7 +285,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.77
+        "diagnosis_time_ms": 0.8
       },
       {
         "scenario_id": "SCN-DB-02",
@@ -296,7 +296,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.63
+        "diagnosis_time_ms": 1.0
       },
       {
         "scenario_id": "SCN-DB-03",
@@ -307,7 +307,7 @@
         "top_1": true,
         "top_3": true,
         "reciprocal_rank": 1.0,
-        "diagnosis_time_ms": 0.84
+        "diagnosis_time_ms": 0.77
       }
     ]
   }
