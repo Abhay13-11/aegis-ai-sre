@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: aegis-ai-sre
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHONUNBUFFERED
+        value: "1"
